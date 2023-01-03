@@ -1,51 +1,15 @@
+import React from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
 import { Inter } from '@next/font/google';
-import Navbar from '../components/Navbar';
+import Link from 'next/link';
 import { MainLayaout } from '../components/layouts/MainLayaout';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home() {
+const templante = () => {
 	return (
 		<MainLayaout>
-			<div className={'description'}>
-				<p>
-					Get started by editing&nbsp;
-					<code className={'code'}>pages/index.tsx</code>
-				</p>
-				<div>
-					<a
-						href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						By{' '}
-						<Image
-							src="/vercel.svg"
-							alt="Vercel Logo"
-							className={'vercelLogo'}
-							width={100}
-							height={24}
-							priority
-						/>
-					</a>
-				</div>
-			</div>
-
-			<div className={'center'}>
-				<Image
-					className={'logo'}
-					src="/next.svg"
-					alt="Next.js Logo"
-					width={180}
-					height={37}
-					priority
-				/>
-				<div className={'thirteen'}>
-					<Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-				</div>
-			</div>
+			<img src="https://media3.giphy.com/media/13CoXDiaCcCoyk/giphy.gif?cid=ecf05e476h4hh0w0t4svnw30tmgdux5b0eqnzc8lrfqm6ii8&rid=giphy.gif&ct=g" />
 
 			<div className={'grid'}>
 				<a
@@ -75,11 +39,15 @@ export default function Home() {
 						Learn about Next.js in an interactive course with&nbsp;quizzes!
 					</p>
 				</a>
-				<h2 className={inter.className}>
-					Templates <span>-&gt;</span>
-				</h2>
-				<p className={inter.className}>about dirrecion&nbsp;About.</p>
+				<Link href="/about" className={'card'}>
+					<h2 className={inter.className}>
+						about <span>-&gt;</span>
+					</h2>
+					<p className={inter.className}>templante OMG🫡 dirrecion&nbsp;About.</p>
+				</Link>
 			</div>
 		</MainLayaout>
 	);
-}
+};
+
+export default templante;

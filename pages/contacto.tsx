@@ -1,37 +1,16 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from '@next/font/google';
-import Navbar from '../components/Navbar';
 import { MainLayaout } from '../components/layouts/MainLayaout';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home() {
+type Props = {};
+
+export default function Contacto() {
 	return (
 		<MainLayaout>
-			<div className={'description'}>
-				<p>
-					Get started by editing&nbsp;
-					<code className={'code'}>pages/index.tsx</code>
-				</p>
-				<div>
-					<a
-						href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						By{' '}
-						<Image
-							src="/vercel.svg"
-							alt="Vercel Logo"
-							className={'vercelLogo'}
-							width={100}
-							height={24}
-							priority
-						/>
-					</a>
-				</div>
-			</div>
+			<img src="https://media2.giphy.com/media/eiMUSSymog0lHMwSqQ/giphy.gif" />
 
 			<div className={'center'}>
 				<Image
@@ -75,10 +54,6 @@ export default function Home() {
 						Learn about Next.js in an interactive course with&nbsp;quizzes!
 					</p>
 				</a>
-				<h2 className={inter.className}>
-					Templates <span>-&gt;</span>
-				</h2>
-				<p className={inter.className}>about dirrecion&nbsp;About.</p>
 			</div>
 		</MainLayaout>
 	);
